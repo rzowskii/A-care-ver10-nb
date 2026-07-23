@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Care Calculator</title>
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider css -->
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container flex">
+                <a href="#" class="navbar-brand flex">
+                    <img src="images/health.png" width="45" height="45">
+                    <span class="text-uppercase text-white font-sm fw-5">A.Care</span>
+                </a>
+                <button type="button" class="navbar-toggler-btn text-white">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+
+                <div class="navbar-collapse bg-green">
+                    <ul class="navbar-nav text-capitalize font-md fw-7">
+                        <li class="nav-item">
+                            <a href="#header" class="nav-link text-white">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link text-white">calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#courses" class="nav-link text-white">Information</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#features" class="nav-link text-white">User Manual</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#newsletter" class="nav-link text-white">Summary Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link text-white">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-banner-wrapper">
+            <div class="header-banner banner-one flex">
+                <div class="container text-center text-white">
+                    <h1>A.Care Health Calculator</h1>
+                    <p class="lead">Websites that offer health calculators and informative content</p>
+                    <!-- <button type = "button" class = "btn">Welcome</button> -->
+                </div>
+            </div>
+            <div class="header-banner banner-two flex">
+                <div class="container text-center text-white">
+                    <h1>BMI</h1>
+                    <p class="lead">Body Mass Index is a measure of your weight relative to your height</p>
+                    <button type="button" class="btn">Learn more</button>
+                </div>
+            </div>
+            <div class="header-banner banner-three flex">
+                <div class="container text-center text-white">
+                    <h1>BMR</h1>
+                    <p class="lead">BMR stands for Basal Metabolic Rate, which is the minimum number of calories your
+                        body needs</p>
+                    <button type="button" class="btn">Learn more</button>
+                </div>
+            </div>
+            <div class="header-banner banner-four flex">
+                <div class="container text-center text-white">
+                    <h1>TDEE</h1>
+                    <p class="lead">estimate of the number of calories your body burns each day.</p>
+                    <button type="button" class="btn">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- main -->
+    <main>
+        <!-- about section -->
+        <section class="about bg-white" id="about">
+            <div class="container">
+                <!-- <div class = "about-content grid"> -->
+                <!-- <div class = "about-left">
+                        <img src = "images/introduction_img.png">
+                    </div>
+                    <div class = "about-right"> -->
+                <!-- <div class="container2"> -->
+                <div class="BMI">
+                    <br><br>
+                </div>
+                <div class="box"><br>
+                    <h1>Health Calculator</h1>
+                    <div class="content">
+                        <div class="texttitle">
+                            <p>Enter Your Age</p><br>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="text-input" id="age1" autocomplete="off" required />
+                    </div>
+                    <div class="gendertitle">
+                        <p>Select Gender</p><br>
+                    </div><br>
+
+                    <div class="gender">
+
+                        <label class="container">
+                            <input type="radio" name="radio" id="m1">
+                            <p class="text">Male</p>
+                            <span class="checkmark"></span>
+                        </label>
+
+
+                        <label class="container">
+                            <input type="radio" name="radio" id="f1">
+                            <p class="text">Female</p>
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="containerHW">
+                        <div class="inputH">
+                            <label for="height">Height(cm)</label>
+                            <input type="number" id="height1" required>
+                        </div>
+
+                        <div class="inputW">
+                            <label for="weight">Weight(kg)</label>
+                            <input type="number" id="weight1" required>
+                        </div>
+                    </div>
+
+                    <button class="calculate" id="submit" onclick="calculate();">Calculate health</button>
+                    <div class="result">
+                        <p>Your BMI is</p>
+                        <div id="result">00.00</div>
+                        <h4 class="comment"></h4>
+                    </div>
+                    <div class="result1">
+                        <p>Your BMR is</p>
+                        <div id="result1">00.00</div>
+                        <p class="comment1"></p>
+                        <div class="daily-calories">
+                            <h4>Daily Calorie Needs (TDEE)</h4>
+
+                            <ul class="activity-levels">
+                                <li>
+                                    <p>
+                                        <strong class="name">Sedentary</strong>
+                                        <small class="desc">Little to no exercise</small>
+                                    </p>
+                                    <span class="value" id="sedentary">0</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong class="name">Lightly Active</strong>
+                                        <small class="desc">Light exercise or sports (1-3 days/week)</small>
+                                    </p>
+                                    <span class="value" id="light">0</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong class="name">Moderately Active</strong>
+                                        <small class="desc">Moderate exercise or sports (4-5 days/week)</small>
+                                    </p>
+                                    <span class="value" id="moderate">0</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong class="name">Very Active</strong>
+                                        <small class="desc">Hard exercise or sports (6-7 days/week)</small>
+                                    </p>
+                                    <span class="value" id="very-active">0</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong class="name">Super Active</strong>
+                                        <small class="desc">Very hard exercise, physical job, or training twice a
+                                            day</small>
+                                    </p>
+                                    <span class="value" id="super-active">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- courses section -->
+        <section class="courses bg-white py-4" id="courses">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color:white">Health Information</h2><br>
+                </div>
+                <div class="courses-content grid">
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="image">
+                                <img src="images/BMI.jpg" alt="course image">
+                            </div>
+                            <div class="details">
+                                <h3 class="font-lg">BMI Section</h3>
+                                <p class="text">ดัชนีมวลกาย
+                                    หรือ Body Mass Index เป็นค่าสากลที่ใช้เพื่อคำนวณหาน้ำหนักตัวที่ควรจะเป็น
+                                    และประมาณระดับไขมันในร่างกาย<br><br>
+                                    สูตรคำนวณ คือ <br>น้ำหนักตัว[Kg] / (ส่วนสูง[m] ยกกำลังสอง)
+                                </p>
+                            </div>
+                            <ul class="text-center fw-6 font-md">
+                                <li><a href="#classification" style="color:#5f967c">classification</a></li>
+                                <li><a href="#disease" style="color:#5f967c">Disease Risk</a></li>
+                                <li><a href="#lowcal_menu" style="color:#5f967c">Low calorie menu</a></li>
+                                <li><a href="#exercise" style="color:#5f967c">Trick Excersise</a></li>
+
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="image">
+                                <img src="images/BMR.jpg" alt="course image">
+                            </div>
+                            <div class="details">
+                                <h3 class="font-lg">BMR Section</h3>
+                                <p class="text">จำนวนแคลอรี่ที่ร่างกายของคุณเผาผลาญขณะพักผ่อน นอนหลับ
+                                    หรือทำกิจกรรมน้อยที่สุด BMR ของคุณคิดเป็นประมาณ 40-60%
+                                    ของพลังงานทั้งหมดที่คุณเผาผลาญในแต่ละวัน<br><br>
+                                    <br>
+                                </p>
+                            </div>
+                            <ul class="text-center fw-6 font-md">
+                                <li><a href="#bmr_info" style="color:#5f967c">Factors</a></li>
+                                <li><a href="#bmr_info" style="color:#5f967c">Significance</a></li>
+                                <li><a href="#challenge" style="color:#5f967c">BMR Challenge</a></li>
+                                <li><a href="#determinant" style="color:#5f967c">Determinants of BMR</a></li>
+
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="image">
+                                <img src="images/TDEE.jpg" alt="course image">
+                            </div>
+                            <div class="details">
+                                <h3 class="font-lg">TDEE Section</h3>
+                                <p class="text">TDEE ย่อมาจาก Total Daily Energy Expenditure หรือ
+                                    การใช้พลังงานทั้งหมดต่อวัน
+                                    เป็นการประมาณจำนวนแคลอรี่ที่ร่างกายของคุณเผาผลาญในแต่ละวัน<br><br>
+                                    <br>
+                                </p>
+                            </div>
+                            <ul class="text-center fw-6 font-md">
+                                <li><a href="#tdee_info" style="color:#5f967c">Key Things to Remember</a></li>
+                                <li><a href="#tdee_info" style="color:#5f967c">Core elements</a></li>
+                                <li><a href="#tdee_info" style="color:#5f967c">TDEE Goal</a></li>
+                                <li><a href="#tdee_info" style="color:#5f967c">How to Calculate TDEE</a></li>
+
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- end of courses section -->
+        <!-- clients section -->
+        <section class="clients py-4 bg-white-sm" id="classification">
+            <div class="container">
+                <div class="section-title">
+                    <h2>BMI Information</h2>
+                </div>
+                <div class="clients-content">
+                    <div class="clients-item text-center">
+                        <div class="image mx-auto">
+                            <img src="images/BMI (Logo).png" alt="clients image">
+                        </div>
+                        <div>
+                            <div class="bmi_category_container">
+                                <table>
+                                    <tr>
+                                        <th>ค่าอยู่ในเกณฑ์</th>
+                                        <th>ค่า BMI</th>
+                                        <th>ภาวะเสี่ยงต่อโรค</th>
+                                    </tr>
+                                    <tr>
+                                        <td>ผอมเกินไป</td>
+                                        <td>น้อยกว่า 18.5</td>
+                                        <td>เสี่ยงต่อการได้รับสารอาหารไม่เพียงพอ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>น้ำหนักปกติ</td>
+                                        <td>18.6-22.9</td>
+                                        <td>มีความเสี่ยงต่อโรคน้อยมาก</td>
+                                    </tr>
+                                    <tr>
+                                        <td>น้ำหนักเกิน</td>
+                                        <td>23.0-24.9</td>
+                                        <td>มีความเสี่ยงต่อโรคมากกว่าปกติ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ภาวะอ้วน</td>
+                                        <td>25.0 - 29.9</td>
+                                        <td>มีความเสี่ยงต่อการเกิดโรคสูง</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ภาวะอ้วนมาก</td>
+                                        <td>30 ขึ้นไป</td>
+                                        <td>เสี่ยงต่อการเกิดโรคสูงมาก</td>
+                                    </tr><br>
+                                </table>
+                            </div>
+                            <!-- <span class = "font-md fw-7">John Doe</span>
+                            <span class = "font-sm fw-6">CEO Smart Edu.</span> -->
+                        </div>
+                    </div>
+
+                    <div class="clients-item text-center">
+                        <div>
+                            <h2>classification page 01</h2>
+                        </div><br>
+                        <div>
+                            <div class="teachers-content grid text-center">
+                                <div class="teachers-item">
+                                    <!-- <div class = "image">
+                                        <img src = "images/teachers_img_1.png" alt = "teachers image">
+                                    </div> -->
+                                    <div class="boxinfo">
+                                        <p class="fw-6 font-lg">Underweight</p>
+                                        <hr><br>
+                                        <p class="text-green font-md fw-5">น้ำหนักน้อยกว่าปกติก็ไม่ค่อยดี
+                                            หากคุณสูงมากแต่น้ำหนักน้อยเกินไป
+                                            อาจเสี่ยงต่อการได้รับสารอาหารไม่เพียงพอหรือได้รับพลังงานไม่เพียงพอ
+                                            ส่งผลให้ร่างกายอ่อนเพลียง่าย
+                                            การรับประทานอาหารให้เพียงพอและออกกำลังกายแบบ "เวทเทรนนิ่ง"
+                                            เพื่อเสริมสร้างกล้ามเนื้อสามารถช่วยเพิ่มค่า BMI
+                                            ให้อยู่ในเกณฑ์ปกติ</p>
+                                    </div>
+                                </div>
+                                <div class="teachers-item">
+                                    <!-- <div class = "image">
+                                        <img src = "images/teachers_img_2.png" alt = "teachers image">
+                                    </div> -->
+                                    <div class="boxinfo">
+                                        <p class="fw-6 font-lg">Healthy</p>
+                                        <hr><br>
+                                        <p class="text-green font-md fw-5"> น้ำหนักที่เหมาะสมสำหรับคนไทยคือค่า BMI
+                                            ระหว่าง 18.5-22.9
+                                            จัดอยู่ในเกณฑ์ปกติ
+                                            ห่างไกลโรคที่เกิดจากความอ้วนและมีความเสี่ยงต่อการเกิดโรคต่างๆน้อยที่สุด
+                                            ควรพยายามรักษาระดับค่า BMI ให้อยู่ในระดับนี้ให้นานที่สุด</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clients-item text-center">
+                        <div>
+                            <h2>classification page 02</h2>
+                        </div><br>
+                        <div>
+                            <div class="teachers-content grid text-center">
+
+                                <div class="teachers-item">
+                                    <!-- <div class = "image">
+                                        <img src = "images/teachers_img_3.png" alt = "teachers image">
+                                    </div> -->
+                                    <div class="boxinfo">
+                                        <p class="fw-6 font-lg">Overweight</p>
+                                        <hr><br>
+                                        <p class="text-green font-md fw-5">
+                                            พยายามอีกนิดเพื่อลดน้ำหนักให้เข้าสู่ค่ามาตรฐาน เพราะค่า BMI
+                                            ในช่วงนี้ยังถือว่าเป็นกลุ่มผู้ที่มีความอ้วนอยู่บ้าง
+                                            แม้จะไม่ถือว่าอ้วน
+                                            แต่หากประวัติคนในครอบครัวเคยเป็นโรคเบาหวานและความดันโลหิตสูง
+                                            ก็ถือว่ายังมีความเสี่ยงมากกว่าคนปกติ</p>
+                                    </div>
+                                </div>
+
+                                <div class="teachers-item">
+                                    <!-- <div class = "image">
+                                        <img src = "images/teachers_img_4.png" alt = "teachers image">
+                                    </div> -->
+                                    <div class="boxinfo">
+                                        <p class="fw-6 font-lg">Extremely&nbsp;Obese</p>
+                                        <hr><br>
+                                        <p class="text-green font-md fw-5">30.0
+                                            ขึ้นไปค่อนข้างอันตราย เพราะเข้าเกณฑ์อ้วนมาก
+                                            เสี่ยงต่อการเกิดโรคร้ายแรงที่แฝงมากับความอ้วน หากค่า BMI
+                                            อยู่ในระดับนี้จะต้องระวังการรับประทานไขมัน
+                                            และควรออกกำลังกายอย่างสม่ำเสมอ หากเลขยิ่งสูงกว่า 40.0
+                                            ยิ่งแสดงถึงความอ้วนที่มากขึ้น ความเสี่ยงจะมากขึ้นตามด้วย</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+                <center>
+                    <a href="#courses" class="btn bg-green mx-auto">Read more</a>
+                </center>
+            </div>
+        </section>
+        <!-- end of clients section -->
+
+        <!-- blogs section -->
+        <section class="blogs py-4 bg-white" id="disease">
+            <div class="container text-center">
+                <div class="section-title">
+                    <h2>BMI Disease</h2>
+                </div>
+                <div class="blogs-content">
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/sugar.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">โรคเบาหวาน</h3>
+                            <p class="text">เป็นโรคที่มาควบคู่กันกับโรคอ้วน
+                                โรคเบาหวานหมายถึงภาวะที่ร่างกายของเรามีปริมาณน้ำตาลในเลือดสูงกว่าระดับปกติ
+                                ซึ่งเกิดจากการที่ตับอ่อนหลั่งอินซูลิน
+                                ซึ่งคือฮอร์โมนที่ช่วยเผาผลาญคาร์โบไฮเดรตและไขมัน
+                                โดยเปลี่ยนน้ำตาลเป็นพลังงานในร่างกาย ได้อย่างไม่มีประสิทธิภาพ
+                                น้ำตาลจึงสะสมอยู่ในร่างกายมาก ไขมันในเลือดจึงสูงตามไปด้วย</p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/heart_di.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">โรคหัวใจ</h3>
+                            <p class="text">
+                                โรคอ้วนทำให้ร่างกายมีคอเลสเตอรอลและไขมันสะสมในร่างกายมากเกินไปจนไขมันเหล่านั้นไปพอกอยู่ในเส้นเลือด
+                                ทำให้หลอดเลือดตีบแคบลง หากนานวันเข้าก็จะเกิดการอุดตันในที่สุด
+                                เลือดจึงไหลเวียนไปเลี้ยงหัวใจไม่เพียงพอ
+                                สุดท้ายก็นำไปสู่ภาวะกล้ามเนื้อหัวใจตาย</p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/brain.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">โรคหลอดเลือดสมอง</h3>
+                            <p class="text">เช่นเดียวกับโรคหัวใจ
+                                ไขมันที่มีมากเกินไปในร่างกายยังอาจไปพอกอยู่ในหลอดเลือดที่หล่อเลี้ยงสมอง
+                                ทำให้หลอดเลือดบริเวณนั้นตีบตันหรืออุดตัน
+                                ผลคือเลือดไม่สามารถส่งไปเลี้ยงสมองได้อย่างเพียงพอ
+                                นำมาสู่ภาวะสมองขาดออกซิเจน สุดท้ายก็เข้าสู่ภาวะสมองตาย</p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/cancer.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">โรคมะเร็ง</h3>
+                            <p class="text">บางคนอาจจะยังไม่รู้ว่าโรคอ้วนก็เสี่ยงทำให้เกิดมะเร็งเช่นเดียวกัน
+                                ไขมันในร่างกายที่สะสมมากเกินไป ทำให้อวัยวะภายในร่างกายทำงานผิดปกติ
+                                จึงเสี่ยงก่อให้เกิดเซลล์มะเร็งหรือเนื้อร้าย เช่น มะเร็งตับ มะเร็งสมอง
+                                มะเร็งเต้านม เป็นต้น</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#courses" class="btn bg-green mx-auto">Read more</a>
+            </div>
+        </section>
+        <!-- end of blogs section -->
+        <!-- about section -->
+        <section class="bmr_info1" id="bmr_info">
+            <div class="container">
+                <div class="about-content grid">
+                    <div class="about-left"><br><br>
+                        <img src="images/introduction.jpg">
+                    </div>
+                    <div class="about-right">
+                        <h2 style="color:#5f967c ;margin-top: 15px" ; class="font-xl">BMR Factors</h2><br>
+                        <p class="text">ปัจจัยที่มีผลต่อ BMR:<br><br>
+                            <b>เพศ:</b> ผู้หญิงโดยทั่วไปมี BMR ต่ำกว่าผู้ชาย<br>
+                            <b>อายุ:</b> BMR ของคุณจะลดลงเมื่ออายุมากขึ้น<br>
+                            <b>น้ำหนัก:</b> BMR ของคุณจะเพิ่มขึ้นเมื่อน้ำหนักตัวของคุณเพิ่มขึ้น<br>
+                            <b>ส่วนสูง:</b> BMR ของคุณจะเพิ่มขึ้นเมื่อส่วนสูงของคุณเพิ่มขึ้น<br>
+                            <b>องค์ประกอบร่างกาย:</b> คนที่มีมวลกล้ามเนื้อมากกว่าไขมันมักจะมี BMR สูงกว่า
+                        </p><br><br>
+                        <h2 style="color:#5f967c ;margin-top: 5px" ; class="font-xl">BMR Significance</h2><br>
+                        <p class="text">
+                            <b>1. กำหนดเป้าหมายแคลอรี่:</b> คุณสามารถใช้ BMR
+                            ของคุณเพื่อกำหนดจำนวนแคลอรี่ที่คุณต้องการทานต่อวันเพื่อลดน้ำหนัก เพิ่มน้ำหนัก
+                            หรือรักษารูปร่าง<br>
+                            <b>2. ติดตามความคืบหน้า:</b> คุณสามารถติดตาม BMR
+                            ของคุณเพื่อดูว่าเปลี่ยนแปลงอย่างไรเมื่อเวลาผ่านไป<br>
+                            <b>3. เข้าใจการเผาผลาญพลังงานของคุณ:</b>
+                            คุณสามารถเข้าใจว่าร่างกายของคุณเผาผลาญพลังงานอย่างไร<br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <a href="#courses" class="btn bg-green mx-auto">Read more</a><br><br><br><br><br>
+            </center>
+            </div>
+        </section>
+        <!-- end of about section -->
+        <!-- blogs section -->
+        <section class="blogs py-4 bg-white" id="challenge">
+            <div class="container text-center">
+                <div class="section-title">
+                    <h2>BMR Challenge</h2>
+                </div>
+                <div class="blogs-content">
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day1.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 1</h3>
+                            <p class="text">
+                                <b>เช้า (279 kcal):</b> <br> ซีซาร์สลัดเต้าหู้ย่างปาปริก้า<br><br>
+                                <b>กลางวัน (303 kcal):</b> <br> ข้าว (ไม่) มันไก่<br><br>
+                                <b>เย็น (309 kcal):</b> <br> ข้าวควินัว น้ำพริกกะปิกุ้ง<br><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day2.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 2</h3>
+                            <p class="text">
+                                <b>เช้า (221 kcal):</b> <br> บะหมี่โอ๊ตไฟเบอร์+อกไก่<br><br>
+                                <b>กลางวัน (367 kcal):</b> <br> ยำถั่วพูแอปเปิ้ลเขียว<br><br>
+                                <b>เย็น (353 kcal):</b> <br> ข้าวผัดรถไฟไข่ขาว+หมูย่าง<br><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day3.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 3</h3>
+                            <p class="text">
+                                <b>เช้า (293 kcal):</b> <br> เส้นบุกผัดกะเพราเห็ด<br><br>
+                                <b>กลางวัน (357 kcal):</b> <br> ข้าวขยำปลาทู<br><br>
+                                <b>เย็น (368 kcal):</b> <br>  เส้นหมี่ข้าวกล้องกับแกงผัก<br><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day4.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 4</h3>
+                            <p class="text">
+                                <b>เช้า (353 kcal):</b> <br>  บะหมี่ผักอกไก่ย่างซอสสุกี้<br><br>
+                                <b>กลางวัน (289 kcal):</b> <br> ข้าวหมกอกไก่ย่างขมิ้น<br><br>
+                                <b>เย็น (342 kcal):</b> <br>  ข้าวควินัวสเต็กกะพง<br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day5.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 5</h3>
+                            <p class="text">
+                                <b>เช้า (344 kcal):</b> <br>  สลัดแอปเปิ้ลข้าวบาร์เลย์<br><br>
+                                <b>กลางวัน (221 kcal):</b> <br> อกไก่อบเต้าเจี้ยวเห็ดหอม<br><br>
+                                <b>เย็น (347 kcal):</b> <br>  เมี่ยงหมี่ข้าวกล้องปลาแซลม่อน<br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day6.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 6</h3>
+                            <p class="text">
+                                <b>เช้า (350 kcal):</b> <br>  สลัดแอปเปิ้ลข้าวบาร์เลย์<br><br>
+                                <b>กลางวัน (368 kcal):</b> <br> อกไก่อบเต้าเจี้ยวเห็ดหอม<br><br>
+                                <b>เย็น (303 kcal):</b> <br>  ข้าวไก่อบสมุนไพร<br><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blogs-item text-center">
+                        <div class="image">
+                            <img src="images/day7.jpg" height="220px" alt="blogs image">
+                        </div>
+                        <div>
+                            <h3 style="color:#5f967c" ; class="font-lg">DAY 7</h3>
+                            <p class="text">
+                                <b>เช้า (357 kcal):</b> <br>  ข้าวยำปลาทู<br><br>
+                                <b>กลางวัน (339 kcal):</b> <br> ข้าวไข่ขาวชะอมทอดปลาทู<br><br>
+                                <b>เย็น (367 kcal):</b> <br>  ข้าวไข่ลวกจิ้มน้ำพริก<br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#courses" class="btn bg-green mx-auto">Read more</a>
+            </div>
+        </section>
+        <!-- end of blogs section -->
+          <!-- programs section i need  -->
+          <section class="programs py-4 bg-white" id="determinant" style="background-color: #ccddd4">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color:#5f967c">BMR Determinants</h2>
+                </div>
+                <div class="programs-content grid">
+                    <div class="programs-item text-white text-center">
+                        <img src="images/hormone.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Sex hormone</p>
+                            <h3 class="text">ฮอร์โมนเพศสามารถกำหนด “จำนวน” ไขมันที่จะนำไปใช้เป็นพลังงานและที่จะ “กักเก็บ” ไว้ได้ ฮอร์โมนเพศชายจะสั่งให้ร่างกายดึงไขมันออกไปใช้ได้ แถมยังกักเก็บไขมันใหม่ไว้น้อยกว่าเพศหญิง จึงทำให้ผู้ชายลดน้ำหนักได้เร็วกว่า</h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/mass.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Muscle mass</p>
+                            <h3 class="text">ใครที่มีกล้ามเนื้อที่ชัดเจน กระชับ ไม่หย่อนคล้อย แสดงว่ามีกล้ามเนื้อมากกว่าไขมัน ดังนั้นค่า BMR จึงมีค่าสูงกว่าคนที่ร่างกายมีแต่ไขมัน<br><br><br><br>
+                            </h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/age.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Age<br></p>
+                            <h3 class="text">อายุที่มากขึ้นจะมีผลต่ออัตราการเผาผลาญพลังงาน โดยค่า BMR จะลดลงประมาณร้อยละ 5 ในทุกๆ 10 ปี และมักเริ่มลดหลังจากอายุ 40 ปี<br><br><br><br><br><br></h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/eat.jpg " alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Eating habits<br></p>
+                            <h3 class="text">การรับประทานอาหารมื้อเล็กๆ บ่อยๆ จะช่วยกระตุ้นระบบเผาผลาญให้ขยันทำงานตลอดวัน ค่า BMR จึงสูงและลดน้ำหนักได้มากขึ้น การทิ้งช่วงการรับประทานระหว่างมื้อนานเกินไปจะทำให้ระบบเผาผลาญปรับตัวให้ทำงานช้าลง </h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/pregnent.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Pregnancy<br></p>
+                            <h3 class="text">ในช่วงตั้งครรภ์ร่างกายของแม่จะมี BMR สูงขึ้นถึงร้อยละ 15-30 และในช่วงให้นมบุตรก็จะยิ่งสูงขึ้นถึงร้อยละ 40 เพราะการเลี้ยงดูเด็กทารกในขณะที่เด็กเจริญเติบโตขึ้นเรื่อยๆ (ไปจนถึงตอนที่ผลิตน้ำนมให้เด็กดื่ม)<br><br><br></h3>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/climate.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>Climate</p>
+                            <h3 class="text">คนที่อาศัยอยู่ในเขตร้อนแบบบ้านเรา ค่า BMR จะสูงกว่าคนที่อาศัยอยู่ในเขตอบอุ่นถึง<br>ร้อยละ 5-20</h3><br><br><br><br><br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <br><br><br><a href="#courses" class="btn bg-green mx-auto">Read more</a><br>
+                </center>
+            </div>
+        </section>
+        <!-- end of programs section -->
+        <!-- courses section -->
+        <section class="courses bg-white py-4" id="tdee_info">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color:white">TDEE information</h2>
+                </div>
+                <div class="courses-content grid">
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="details">
+                                <div class="clients-item text-center"><br><br>
+                                    <div class="image mx-auto" style="border-color:whitesmoke">
+                                        <img src="images/knowledge.png" alt="clients image">
+                                    </div>
+                                </div>
+                                <h3 class="font-lg"><br>TDEE knowledge</h3>
+                                <p class="text">
+                                    <li>TDEE เป็นการประมาณค่า และการเผาผลาญแคลอรี่จริงของคุณอาจแตกต่างกันไปในแต่ละวัน
+                                    </li>
+                                    <li>TDEE ของคุณสามารถเปลี่ยนแปลงได้ตามเวลาเมื่อน้ำหนัก ระดับกิจกรรม
+                                        หรือองค์ประกอบร่างกายของคุณเปลี่ยนแปลง
+                                    </li>
+                                    <li>ผู้หญิงโดยทั่วไปมี TDEE ต่ำกว่าผู้ชาย</li>
+                                    <li>ระดับกิจกรรมมีผลต่อ TDEE ของคุณมากที่สุด</li>
+                                    <li>โรคบางชนิดสามารถส่งผลต่อ TDEE ของคุณ
+                                        คุณควรปรึกษาโภชนาการหรือผู้เชี่ยวชาญด้านสุขภาพเพื่อคำนวณ TDEE ของคุณอย่างแม่นยำ
+                                    </li><br><br>
+                                </p>
+                    </article>
+
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="details">
+                                <div class="clients-item text-center"><br><br>
+                                    <div class="image mx-auto" style="border-color:whitesmoke">
+                                        <img src="images/data-analytics.png" alt="clients image">
+                                    </div>
+                                </div>
+                                <h3 class="font-lg"><br>Core elements</h3>
+                                <p class="text">
+                                    <li>อัตราการเผาผลาญพลังงานพื้นฐาน (BMR): แคลอรี่ที่ร่างกายของคุณเผาผลาญเมื่อพักผ่อน
+                                        เพื่อรักษาฟังก์ชันพื้นฐาน เช่น การหายใจและการไหลเวียนโลหิต</li>
+                                    <li>ระดับกิจกรรม: แคลอรี่ที่คุณเผาผลาญผ่านกิจกรรมประจำวัน เช่น การเดิน การทำงาน
+                                        และการออกกำลังกาย</li>
+                                    <li>ผลกระทบทางความร้อนของอาหาร (TEF): พลังงานที่ร่างกายของคุณใช้ในการย่อย ดูดซึม
+                                        และเก็บสะสมอาหาร</li><br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="details">
+                                <div class="clients-item text-center"><br><br>
+                                    <div class="image mx-auto" style="border-color:whitesmoke">
+                                        <img src="images/goal (1).png" alt="clients image">
+                                    </div>
+                                </div>
+                                <h3 class="font-lg"><br>TDEE Goal</h3>
+                                <p class="text">
+                                    <li>เมื่อทราบ TDEE ของคุณแล้ว คุณสามารถใช้ TDEE
+                                        นี้เพื่อตั้งเป้าหมายแคลอรี่ของคุณสำหรับ:</li><br>
+                                    <li>การลดน้ำหนัก: ทานแคลอรี่น้อยกว่า TDEE </li>
+                                    <li>การเพิ่มน้ำหนัก: ทานแคลอรี่มากกว่า TDEE </li>
+                                    <li>การรักษารูปร่าง: ทานแคลอรี่เท่ากับ TDEE </li><br><br><br><br><br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="courses-item">
+                        <div class="bg-white-sm">
+                            <div class="details">
+                                <div class="clients-item text-center"><br><br>
+                                    <div class="image mx-auto" style="border-color:whitesmoke">
+                                        <img src="images/guide.png" alt="clients image">
+                                    </div>
+                                </div>
+                                <h3 class="font-lg"><br>How to Calculate TDEE</h3>
+                                <p class="text">
+                                    <li>ไม่ออกกำลังกายหรือกิจวัตรประจำวันเป็นการทำงานนั่งโต๊ะ : BMR x 1.2</li>
+                                    <li>ออกกำลังกายเบา ๆ หรือออกกำลังกาย 1 – 2 ครั้งต่อสัปดาห์ : BMR x 1.375 </li>
+                                    <li>ออกกำลังกายปานกลาง หรือออกกำลังกาย 3 – 5 ครั้งต่อสัปดาห์ : BMR x 1.55 </li>
+                                    <li>ออกกำลังกายหนัก หรือออกกำลังกาย 6 – 7 ครั้งต่อสัปดาห์ : BMR x 1.725</li>
+                                    <li>ออกกำลังกายหนักมาก หรือออกกำลังกายทุกวัน วันละ 2 เวลา : BMR x 9</li><br><br>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <center>
+                <br><br><br><a href="#courses" class="btn bg-green mx-auto">Read more</a><br><br>
+                </center>
+            </div>
+        </section>
+        <!-- end of courses section -->
+        <!-- teachers section -->
+        <section class="teachers py-4 bg-white-sm" id="lowcal_menu">
+            <div class="container">
+                <div class="section-title">
+                    <h2>low calorie menu</h2><br>
+                </div>
+                <div class="teachers-content grid text-center">
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food1.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">เกาเหลาหรือแกงจืดวุ้นเส้น</p>
+                            <p class="text-green font-md fw-5">150 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food2.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ต้มยำไก่น้ำใส </p>
+                            <p class="text-green font-md fw-5">65-100 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food3.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">สุกี้น้ำ (เนื้อไก่หรือทะเล) </p>
+                            <p class="text-green font-md fw-5">200-350 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food4.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ยำวุ้นเส้น</p>
+                            <p class="text-green font-md fw-5">120-200 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food5.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ผัดผักบุ้ง</p>
+                            <p class="text-green font-md fw-5">40-50 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food6.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ยำไข่ต้ม</p>
+                            <p class="text-green font-md fw-5">100-110 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food7.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ต้มแซ่บกระดูกอ่อน</p>
+                            <p class="text-green font-md fw-5">180-200 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food8.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">ผัดผักใส่กุ้ง</p>
+                            <p class="text-green font-md fw-5">200 Kcal</p>
+                        </div>
+                    </div>
+
+                    <div class="teachers-item">
+                        <div class="clients-item text-center">
+                            <div class="image mx-auto">
+                                <img src="images/food9.jpg" alt="clients image">
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="fw-6 font-lg">กระเพาะปลา</p>
+                            <p class="text-green font-md fw-5">250 Kcal</p>
+                        </div>
+                    </div>
+                </div><br><br><br><br>
+                <center>
+                    <a href="#courses" class="btn bg-green mx-auto">Read more</a>
+                </center>
+            </div>
+        </section>
+        <!-- end of teachers section -->
+
+        <!-- programs section i need  -->
+        <section class="programs py-4 bg-white" id="exercise">
+            <div class="container">
+                <div class="section-title">
+                    <h2>trick exercise</h2>
+                </div>
+                <div class="programs-content grid">
+                    <div class="programs-item text-white text-center">
+                        <img src="images/burpees.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>BUPEERS</p>
+                            <h3 class="text"> 10 - 15 ครั้ง <br>ทั้งหมด 3 เซต <br> การเปลี่ยนจากท่าวิดพื้นเป็น
+                                กระโดดและกลับสู่ท่าวิดพื้น</h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/CxmnTU1U5Gg?si=Sp-rDz_kZY6zDOu3"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/mountain.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>MOUNTAIN</p>
+                            <h3 class="text">10-15 ครั้ง<br>ทั้งหมด 3 เซต <br> สิ่งสำคัญคือจะเน้นที่กล้ามเนื้อหน้าท้อง
+                            </h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/vC2zO4zbYcQ?si=1W76jhpbLF-PRT2W"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/plank.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>PLANK</p>
+                            <h3 class="text">ทำทีละ 20 วิ<br>ทั้งหมด 3 เซต <br>ท่าฝึกความอดทนระหว่างแขน ลำตัว
+                                และปลายเท้า </h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/pSHjTRCQxIw?si=9_YMJIfD-3FyhhCl"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/lying.jpg " alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>LYING LEG<br></p>
+                            <h3 class="text">10-20 ครั้ง<br>ทั้งหมด 3 เซต <br>
+                                ช่วยปรับปรุงความมั่นคงและความสมดุลของร่างกาย</h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/Wp4BlxcFTkE?si=J9ZnMI01FW0Ta3Aa"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/squat.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>JUMP SQUAT</p>
+                            <h3 class="text">ทำ 12 ครั้งขึ้นไป<br>เป็นท่าที่กระชับสัดส่วนได้ดี</h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/A-cFYWvaHr0?si=A0fiyefzonOD5xAT"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="programs-item text-white text-center">
+                        <img src="images/kettle.jpg" alt="programs image">
+                        <div class="info">
+                            <p class="fw-6 font-xl"><br>KETTLEBELL</p>
+                            <h3 class="text">ทำทีละ 10 นาที<br>ทั้งหมด 3 เซต <br>
+                                เป็นหนึ่งในแบบฝึกหัดการเผาแคลอรี่ที่ดีที่สุด</h3>
+                            <br>
+                            <center>
+                                <a href="https://youtu.be/pA6o-a3y1Vo?si=h7inTcsUUIHqThO_"
+                                    class="btn bg-green mx-auto">tutorial</a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <center><br><br><br>
+                    <a href="#courses" class="btn bg-green mx-auto">Read more</a>
+                </center>
+            </div>
+        </section>
+        <!-- end of programs section -->
+
+        <!-- features section -->
+        <section class="features bg-white-sm py-4" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Manual</h2>
+                </div>
+                <div class="features-content grid text-center">
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_cal.png" alt="features icon" height="60" weight="200">
+                        </div>
+                        <h3 class="font-lg">Calculator</h3>
+                        <p class="text"> ให้ทำการกรอกค่าสำหรับการคำนวณค่าสุขภาพ โดยใส่ตัวเลข อายุ น้ำหนัก ส่วนสูง
+                            และเลือกเพศ เมื่อต้องการคำนวณค่าใดให้กดปุ่ม calculate นั้นๆ ซึ่ง TDEE เป็นค่าที่คำนวณจาก BMR
+                        </p>
+                    </div>
+
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_info.png" alt="features icon">
+                        </div>
+                        <h3 class="font-lg">Display results</h3>
+                        <p class="text">การแสดงผลลัพธ์ของ BMI จะแสดงเป็นค่า BMI ตามด้วยเกณฑ์ดัชนีมวลกายด้านล่าง ส่วน BMR
+                            จะแสดงเป็นตัวเลข ซึ่งมีตาราง TDEE ประกอบด้วย โดยแบ่งตามความถี่ของการ<br>ออกกำลังกายเป็น 5
+                            ระดับ
+                        </p>
+                    </div>
+
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_fb.png" alt="features icon">
+                        </div>
+                        <h3 class="font-lg">Information</h3>
+                        <p class="text">ข้อมูลที่แสดงจะประกอบด้วยความหมายของค่านั้นๆ และข้อมูลตารางเกณฑ์ดัชนีมวลกาย
+                            โรคที่อาจเกิดขึ้นเมื่อค่า BMI สูงกว่ามาตรฐาน รวมถึงวิธีที่ทำให้น้ำหนักอยู่ในเกณฑ์ปกติ
+                            ต้องการอ่านข้อมูลใดสามารถเลื่อนลงเพื่อดูรายละเอียดได้เลย
+                        </p>
+                    </div>
+
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_select.png" alt="features icon">
+                        </div>
+                        <h3 class="font-lg">Selecting</h3>
+                        <p class="text">การเลือกใช้งานฟีเจอร์ต่างๆสามารถกดแถบ menu bar ด้านบนของ website ได้เลย
+                            ยกเว้นการอ่านข้อมูลของค่าสุขภาพต่างๆ จะต้องทำการไปที่ menu ของ information จากนั้นเลือกหัวข้อ
+                            ที่ต้องการอ่านและคลิกได้เลย เมื่อจะอ่านหัวข้ออื่นๆให้กดปุ่ม read more ที่บริเวณท้ายของเนื้อหานั้นๆ 
+                        </p>
+                    </div>
+
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_report.png" alt="features icon">
+                        </div>
+                        <h3 class="font-lg">Summary Report</h3>
+                        <p class="text">มีการสรุปรายงานการใช้ website โดยจะมีการเก็บข้อมูลจำนวนผู้ที่คำนวณค่าสุขภาพใน website
+                            นอกจากนี้ ยังมีสรุปค่าเฉลี่ยของทั้งค่า BMI BMR และ TDEE ซึ่งจะจำแนกค่าเฉลี่ยตามเพศที่เลือกไว้ใน menu calculator
+                        </p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon bg-white flex">
+                            <img src="images/manual_feedback.png" alt="features icon">
+                        </div>
+                        <h3 class="font-lg">Feedback</h3>
+                        <p class="text">เป็นส่วนที่ให้ผู้ใช้งานสามารถแนะนำหรือติชมเว็บไซต์ได้ โดยข้อมูลจะถูกเก็บเป็นความลับ เนื่องจาก database 
+                            จะเข้าถึงได้จาก google sheet ของ developer และ ทีมที่เกี่ยวข้องเท่านั้น
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of features section -->
+
+        <!-- newsletter section -->
+        <section class="newsletter py-4" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content flex text-white text-center"><br><br><br>
+                    <h2 class="font-xl">Summary Report</h2>
+                </div>
+            </div>
+        </section>
+        <!-- end of newsletter section -->
+        <br>
+        <div id="postData" style="background-color: #fff"></div>
+        <!-- contact section -->
+        <section class="contact py-4 bg-white" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h3>Experience Feedback</h3><br>
+                </div>
+                <div class="contact-content grid">
+                    <div class="contact-right">
+                        <!-- <iframe src="https://images.everydayhealth.com/images/healthy-living/about-us-hero-alt.jpg?sfvrsn=68592040_1" width="100" height="150" style="border:0;" ></iframe> -->
+                        <img
+                            src="https://images.everydayhealth.com/images/healthy-living/about-us-hero-alt.jpg?sfvrsn=68592040_1">
+                        <div class="contact-info grid text-center">
+                            <div class="contact-info-group">
+                                <span class="text-green">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                </span>
+                                <p class="text font-md fw-6">Thammasat School of Engineering</p>
+                            </div>
+                            <div class="contact-info-group">
+                                <span class="text-green">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </span>
+                                <p class="text font-md fw-6">A_Care.co.th@gmail.com</p>
+                            </div>
+                            <div class="contact-info-group">
+                                <span class="text-green">
+                                    <i class="fas fa-phone fa-2x"></i>
+                                </span>
+                                <p class="text font-md fw-6">099 999 9999</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-left">
+                        <div class="font-md text-center">
+                            <input type="text" class="form-control fw-6" placeholder="Full Name" name="full_name" id="full_name">
+                            <input type="email" class="form-control fw-6" placeholder="E-mail" name="email" id="email">
+                            <textarea rows="5" class="form-control fw-6" placeholder="Message" id="message"
+                                name="message"></textarea>
+                            <button id="submit" onclick="feedback();" class="btn bg-green">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact section -->
+        
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer class="footer bg-dark" id="footer">
+        <div class="container">
+            <div class="footer-content grid">
+                <div class="footer-logo flex">
+                    <img src="images/health.png">
+                    <span class="text-uppercase text-white font-sm fw-5">A-Care Calculator</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- slick slider js -->
+    <script src="plugins/slick-1.8.1/slick/slick.js"></script>
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
